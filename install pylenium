@@ -1,0 +1,34 @@
+PS C:\Windows\system32> ExecutionPolicy
+Unrestricted
+PS C:\Windows\system32> Set-ExecutionPolicy AllSigned
+
+Execution Policy Change
+The execution policy helps protect you from scripts that you do not trust. Changing the execution policy might expose
+you to the security risks described in the about_Execution_Policies help topic at
+https:/go.microsoft.com/fwlink/?LinkID=135170. Do you want to change the execution policy?
+[Y] Yes  [A] Yes to All  [N] No  [L] No to All  [S] Suspend  [?] Help (default is "N"): Y
+PS C:\Windows\system32> Set-ExecutionPolicy AllSigned
+
+Execution Policy Change
+The execution policy helps protect you from scripts that you do not trust. Changing the execution policy might expose
+you to the security risks described in the about_Execution_Policies help topic at
+https:/go.microsoft.com/fwlink/?LinkID=135170. Do you want to change the execution policy?
+[Y] Yes  [A] Yes to All  [N] No  [L] No to All  [S] Suspend  [?] Help (default is "N"): A
+PS C:\Windows\system32> ExecutionPolicy
+AllSigned
+PS C:\Windows\system32> Set-ExecutionPolicy Bypass -Scope Process -Force; [System.Net.ServicePointManager]::SecurityProtocol = [System.Net.ServicePointManager]::SecurityProtocol -bor 3072; iex ((New-Object System.Net.WebClient).DownloadString('https://chocolatey.org/install.ps1'))
+
+
+No Power Shell como admin:
+
+1)choco install chromedriver -> A
+
+No visual studio:
+
+1)python -m venv "venv"
+2)COnfigurar manual no visual code o venv
+
+Criar pasta tests e o arquivo de acordo com tutorial
+
+Rodar o teste
+python -m pytest tests/test_google.py
